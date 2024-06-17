@@ -27,7 +27,7 @@ in
         ]
         ++ lib.optionals cursor.enable [
           (builtins.toFile "hyprland-cursors.conf" ''
-            env = HYPRCURSOR_THEME,MyCursor
+            env = HYPRCURSOR_THEME,catppuccin-${cursor.flavor}-${cursor.accent}-cursors
             env = HYPRCURSOR_SIZE,24
           '')
         ];
